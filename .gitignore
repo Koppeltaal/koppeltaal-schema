@@ -8,3 +8,4 @@ parts
 *.swo
 .DS_Store
 *.egg-info
+pytestdebug.log

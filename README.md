@@ -8,10 +8,13 @@ The XSD files are encapsulated in a Python package for easy inclusion in the Pyt
 
 ## How to use?
 
+We use buildout to define dependencies and [pytest] to run the tests:
+
 ```sh
 $ python2.7 bootstrap.py
 $ bin/buildout
 $ bin/py.test
 ```
 
+[pytest]: https://pytest.org
 [fhir-all-xsd]:http://www.hl7.org/documentcenter/public/standards/FHIR/fhir-all-xsd.zip
