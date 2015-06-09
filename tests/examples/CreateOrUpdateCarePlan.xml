@@ -1,0 +1,156 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>urn:uuid:4dd63195-3612-49cc-894a-0112daf198f5</id>
+	<category term="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#Koppeltaal Samples" label="Koppeltaal Samples" scheme="http://hl7.org/fhir/tag/security" />
+	<category term="http://hl7.org/fhir/tag/message" scheme="http://hl7.org/fhir/tag" />
+	<entry>
+		<id>urn:uuid:635d3551-04a1-4e7f-bf86-f94947371fcd</id>
+		<content type="text/xml">
+			<MessageHeader id="635d3551-04a1-4e7f-bf86-f94947371fcd" xmlns="http://hl7.org/fhir">
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageHeader#Patient">
+					<valueResource>
+						<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+					</valueResource>
+				</extension>
+				<identifier value="635d3551-04a1-4e7f-bf86-f94947371fcd" />
+				<timestamp value="2015-05-20T14:44:37+02:00" />
+				<event>
+					<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageEvents" />
+					<code value="CreateOrUpdateCarePlan" />
+					<display value="CreateOrUpdateCarePlan" />
+				</event>
+				<source>
+					<software value="Whatever" />
+					<endpoint value="SomeStuff" />
+				</source>
+				<data>
+					<reference value="http://test.mijnapplicatie.nl/fhir/CarePlan/123454" />
+				</data>
+			</MessageHeader>
+		</content>
+	</entry>
+	<entry>
+		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/CarePlan/123454" />
+		<content type="text/xml">
+			<CarePlan id="123454" xmlns="http://hl7.org/fhir">
+				<patient>
+					<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+				</patient>
+				<status value="active" />
+				<participant>
+					<role>
+						<coding>
+							<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanParticipantRole" />
+							<code value="Requester" />
+							<display value="Requester" />
+						</coding>
+					</role>
+					<member>
+						<reference value="http://test.mijnapplicatie.nl/fhir/Practitioner/187534" />
+					</member>
+				</participant>
+				<goal id="12523264643">
+					<description value="To reduce the amount of time I spend on my cellphone." />
+					<status value="in progress" />
+					<notes value="Patient does not want to use smart phones." />
+				</goal>
+				<activity id="21232123523">
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityDefinition">
+						<valueString value="JWG" />
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityKind">
+						<valueCoding>
+							<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/ActivityKind" />
+							<code value="Game" />
+							<display value="Game" />
+						</valueCoding>
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityDescription">
+						<valueString value="Learn how to deal with Autism." />
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#SubActivity">
+						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#SubActivityIdentifier">
+							<valueString value="mission 1" />
+						</extension>
+						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#SubActivityStatus">
+							<valueCoding>
+								<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus" />
+								<code value="InProgress" />
+								<display value="InProgress" />
+							</valueCoding>
+						</extension>
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#SubActivity">
+						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#SubActivityIdentifier">
+							<valueString value="mission3" />
+						</extension>
+						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#SubActivityStatus">
+							<valueCoding>
+								<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus" />
+								<code value="Available" />
+								<display value="Available" />
+							</valueCoding>
+						</extension>
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#Participant">
+						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ParticipantMember">
+							<valueResource>
+								<reference value="http://test.mijnapplicatie.nl/fhir/Practitioner/187534" />
+							</valueResource>
+						</extension>
+						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ParticipantRole">
+							<valueCodeableConcept>
+								<coding>
+									<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanParticipantRole" />
+									<code value="Caregiver" />
+									<display value="Caregiver" />
+								</coding>
+							</valueCodeableConcept>
+						</extension>
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#StartDate">
+						<valueDateTime value="2015-05-20T14:44:37+02:00" />
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityStatus">
+						<valueCoding>
+							<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus" />
+							<code value="Available" />
+							<display value="Available" />
+						</valueCoding>
+					</extension>
+					<goal value="12523264643" />
+					<prohibited value="false" />
+					<notes value="Seems to be very difficult for this participant." />
+					<simple>
+						<category value="procedure" />
+						<performer>
+							<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+						</performer>
+					</simple>
+				</activity>
+			</CarePlan>
+		</content>
+	</entry>
+	<entry>
+		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+		<content type="text/xml">
+			<Patient id="215325" xmlns="http://hl7.org/fhir">
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Patient#Age">
+					<valueInteger value="43" />
+				</extension>
+				<name>
+					<use value="official" />
+					<family value="Todea" />
+					<given value="Reli" />
+				</name>
+				<gender>
+					<coding>
+						<system value="http://hl7.org/fhir/vs/administrative-gender" />
+						<code value="M" />
+						<display value="Male" />
+					</coding>
+				</gender>
+				<birthDate value="1972-02-28T00:00:00+01:00" />
+			</Patient>
+		</content>
+	</entry>
+</feed>

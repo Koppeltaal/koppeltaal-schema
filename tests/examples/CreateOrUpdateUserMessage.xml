@@ -1,0 +1,56 @@
+<feed xmlns="http://www.w3.org/2005/Atom"><id>urn:uuid:bd0878e2-2c43-4ec4-87af-57d43ea849e5</id>
+<category term="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#Koppeltaal Samples" label="Koppeltaal Samples" scheme="http://hl7.org/fhir/tag/security" />
+<category term="http://hl7.org/fhir/tag/message" scheme="http://hl7.org/fhir/tag" />
+<entry>
+	<id>urn:uuid:6a6d8365-40f1-4bc1-b231-1dc124082065</id>
+	<content type="text/xml">
+		<MessageHeader id="6a6d8365-40f1-4bc1-b231-1dc124082065" xmlns="http://hl7.org/fhir">
+			<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageHeader#Patient">
+				<valueResource>
+					<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+				</valueResource>
+			</extension>
+			<identifier value="6a6d8365-40f1-4bc1-b231-1dc124082065" />
+			<timestamp value="2015-05-20T14:44:40+02:00" />
+			<event>
+				<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageEvents" />
+				<code value="CreateOrUpdateUserMessage" />
+				<display value="CreateOrUpdateUserMessage" />
+			</event>
+			<data>
+				<reference value="http://test.mijnapplicatie.nl/fhir/UserMessage/123456754/_history/2015-05-15T08:45:42:768.7255" />
+			</data>
+		</MessageHeader>
+	</content>
+</entry>
+<entry>
+	<link rel="self" href="http://test.mijnapplicatie.nl/fhir/UserMessage/123456754/_history/2015-05-15T08:45:42:768.7255" />
+	<content type="text/xml">
+		<Other id="123456754" xmlns="http://hl7.org/fhir">
+			<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/UserMessage#Content">
+				<valueString value="&lt;p&gt;This is a message in a &lt;ul&gt;bottle&lt;/ul&gt;&lt;/p&gt;" />
+			</extension>
+			<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/UserMessage#SubjectString">
+				<valueString value="For your eyes only." />
+			</extension>
+			<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/UserMessage#From">
+				<valueResource>
+					<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+				</valueResource>
+			</extension>
+			<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/UserMessage#To">
+				<valueResource id="982800">
+					<reference value="http://test.mijnapplicatie.nl/fhir/Practitioner/982800" />
+				</valueResource>
+			</extension>
+			<code>
+				<coding>
+					<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/OtherResourceUsage" />
+					<code value="UserMessage" />
+					<display value="UserMessage" />
+				</coding>
+			</code>
+		</Other>
+	</content>
+</entry>
+</feed>

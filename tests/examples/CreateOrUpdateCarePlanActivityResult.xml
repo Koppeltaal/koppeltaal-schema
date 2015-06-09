@@ -1,0 +1,70 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>urn:uuid:f5df331f-7f94-44a8-8992-1a4cb2f57b06</id>
+	<category term="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#Koppeltaal Samples" label="Koppeltaal Samples" scheme="http://hl7.org/fhir/tag/security" />
+	<category term="http://hl7.org/fhir/tag/message" scheme="http://hl7.org/fhir/tag" />
+	<entry>
+		<id>urn:uuid:3a56ea6d-83be-4314-b6ad-44fda502f100</id>
+		<content type="text/xml">
+			<MessageHeader id="3a56ea6d-83be-4314-b6ad-44fda502f100" xmlns="http://hl7.org/fhir">
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageHeader#Patient">
+					<valueResource>
+						<reference value="http://test.mijnapplicatie.nl/fhir/Patient/124121" />
+					</valueResource>
+				</extension>
+				<identifier value="3a56ea6d-83be-4314-b6ad-44fda502f100" />
+				<timestamp value="2015-05-20T14:44:41+02:00" />
+				<event>
+					<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageEvents" />
+					<code value="CreateOrUpdateCarePlanActivityResult" />
+					<display value="CreateOrUpdateCarePlanActivityResult" />
+				</event>
+				<data>
+					<reference value="http://test.mijnapplicatie.nl/fhir/DiagnosticReport/12451121342254" />
+				</data>
+			</MessageHeader>
+		</content>
+	</entry>
+	<entry>
+		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/DiagnosticReport/12451121342254" />
+		<content type="text/xml">
+			<DiagnosticReport id="12451121342254" xmlns="http://hl7.org/fhir">
+				<extension url="Activity">
+					<valueString value="http://test.mijnapplicatie.nl/fhir/CarePlanActivity/212123523" />
+				</extension>
+				<extension url="Questionnaire">
+					<valueResource>
+						<reference value="http://test.mijnapplicatie.nl/fhir/Questionnaire/1421253" />
+					</valueResource>
+				</extension>
+				<name>
+					<text value="HADS40" />
+				</name>
+				<status value="final" />
+				<issued value="2014-01" />
+				<subject>
+					<reference value="http://test.mijnapplicatie.nl/fhir/Patient/124121" />
+				</subject>
+				<performer>
+					<reference value="http://test.mijnapplicatie.nl/fhir/Practitioner/982800" />
+				</performer>
+				<diagnosticDateTime value="2015-05-20T14:44:41+02:00" />
+				<result>
+					<reference value="12442" />
+				</result>
+			</DiagnosticReport>
+		</content>
+	</entry>
+	<entry>
+		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/Observation/12442" />
+		<content type="text/xml">
+			<Observation id="12442" xmlns="http://hl7.org/fhir">
+				<name>
+					<text value="SubScale1" />
+				</name>
+				<valueDecimal value="19" />
+				<status value="final" />
+				<reliability value="ok" />
+			</Observation>
+		</content>
+	</entry>
+</feed>

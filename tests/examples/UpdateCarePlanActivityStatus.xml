@@ -1,0 +1,99 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>urn:uuid:5c0127cc-38d6-4f8d-82fe-007e1afe6880</id>
+	<category term="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#Koppeltaal Samples" label="Koppeltaal Samples" scheme="http://hl7.org/fhir/tag/security" />
+	<category term="http://hl7.org/fhir/tag/message" scheme="http://hl7.org/fhir/tag" />
+	<entry>
+		<id>urn:uuid:42480a45-ba2d-4a27-b7eb-22e4f09bf446</id>
+		<content type="text/xml">
+			<MessageHeader id="42480a45-ba2d-4a27-b7eb-22e4f09bf446" xmlns="http://hl7.org/fhir">
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageHeader#Patient">
+					<valueResource>
+						<reference value="http://antes.emhp.nl/Patient/124121" />
+					</valueResource>
+				</extension>
+				<identifier value="42480a45-ba2d-4a27-b7eb-22e4f09bf446" />
+				<timestamp value="2015-05-20T14:44:39+02:00" />
+				<event>
+					<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageEvents" />
+					<code value="UpdateCarePlanActivityStatus" />
+					<display value="UpdateCarePlanActivityStatus" />
+				</event>
+				<data>
+					<reference value="http://test.mijnapplicatie.nl/fhir/CarePlanActivityStatus/872413224/_history/2015-04-02T13:27:45:792.8153" />
+				</data>
+			</MessageHeader>
+		</content>
+	</entry>
+	<entry>
+		<id>http://test.mijnapplicatie.nl/fhir/CarePlanActivityStatus/872413224</id>
+		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/CarePlanActivityStatus/872413224/_history/2015-04-02T13:27:45:792.8153" />
+		<content type="text/xml">
+			<Other xmlns="http://hl7.org/fhir">
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#Activity">
+					<valueString value="http://test.mijnapplicatie.nl/fhir/CarePlan/464#12345667" />
+				</extension>
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#PercentageCompleted">
+					<valueDecimal value="10" />
+				</extension>
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#ActivityStatus">
+					<valueCoding>
+						<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus" />
+						<code value="InProgress" />
+						<display value="InProgress" />
+					</valueCoding>
+				</extension>
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#SubActivity">
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#SubActivityIdentifier">
+						<valueString value="mission 1" />
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#SubActivityStatus">
+						<valueCoding>
+							<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus" />
+							<code value="InProgress" />
+							<display value="InProgress" />
+						</valueCoding>
+					</extension>
+				</extension>
+				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#SubActivity">
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#SubActivityIdentifier">
+						<valueString value="mission 3" />
+					</extension>
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus#SubActivityStatus">
+						<valueCoding>
+							<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlanActivityStatus" />
+							<code value="Available" />
+							<display value="Available" />
+						</valueCoding>
+					</extension>
+				</extension>
+				<extension url="http://test.mijnapplicatie.nl/fhir/Activity#BlackBoxState">
+					<valueResource>
+						<reference value="124124" />
+					</valueResource>
+				</extension>
+				<code>
+					<coding>
+						<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/OtherResourceUsage" />
+						<code value="CarePlanActivityStatus" />
+						<display value="CarePlanActivityStatus" />
+					</coding>
+				</code>
+			</Other>
+		</content>
+	</entry>
+	<entry>
+		<id>http://test.mijnapplicatie.nl/fhir/BlackBox/124124</id>
+		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/BlackBox/124124" />
+		<content type="text/xml">
+			<Other id="124124" xmlns="http://hl7.org/fhir">
+				<code>
+					<coding>
+						<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/OtherResourceUsage" />
+						<code value="BlackBoxState" />
+						<display value="BlackBoxState" />
+					</coding>
+				</code>
+			</Other>
+		</content>
+	</entry>
+</feed>
