@@ -27,7 +27,6 @@ def test_create_or_update_careplan_activity_result():
     stanza = lxml.etree.parse(str(xml))
     assert validate(stanza) is None
 
-@pytest.mark.xfail(reason='waiting for Bart M to provide more information')
 def test_create_or_update_user_message():
     xml = here.dirpath() / 'examples/CreateOrUpdateUserMessage.xml'
     stanza = lxml.etree.parse(str(xml))
