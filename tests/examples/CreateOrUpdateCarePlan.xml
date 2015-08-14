@@ -1,39 +1,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>urn:uuid:4dd63195-3612-49cc-894a-0112daf198f5</id>
-	<category term="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#Koppeltaal Samples" label="Koppeltaal Samples" scheme="http://hl7.org/fhir/tag/security" />
+	<id>urn:uuid:5d1fc908-ff16-45dd-bf24-411a7f3e5320</id>
+	<category term="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Domain#Javascript Clients" label="Javascript Clients" scheme="http://hl7.org/fhir/tag/security" />
 	<category term="http://hl7.org/fhir/tag/message" scheme="http://hl7.org/fhir/tag" />
 	<entry>
-		<id>urn:uuid:635d3551-04a1-4e7f-bf86-f94947371fcd</id>
 		<content type="text/xml">
-			<MessageHeader id="635d3551-04a1-4e7f-bf86-f94947371fcd" xmlns="http://hl7.org/fhir">
+			<MessageHeader id="a1c51a85-a201-4e9b-bd7b-41b26de656b2" xmlns="http://hl7.org/fhir">
 				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageHeader#Patient">
 					<valueResource>
-						<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+						<reference value="http://jsportal.nl/FHIR/Koppeltaal/Patient/215325" />
 					</valueResource>
 				</extension>
-				<identifier value="635d3551-04a1-4e7f-bf86-f94947371fcd" />
-				<timestamp value="2015-05-20T14:44:37+02:00" />
+				<identifier value="a1c51a85-a201-4e9b-bd7b-41b26de656b2" />
+				<timestamp value="2015-07-01T13:39:54+02:00" />
 				<event>
 					<system value="http://ggz.koppeltaal.nl/fhir/Koppeltaal/MessageEvents" />
 					<code value="CreateOrUpdateCarePlan" />
 					<display value="CreateOrUpdateCarePlan" />
 				</event>
 				<source>
-					<software value="Whatever" />
-					<endpoint value="SomeStuff" />
+					<software value="Koppeltaal Samples" />
+					<endpoint value="Not used" />
 				</source>
 				<data>
-					<reference value="http://test.mijnapplicatie.nl/fhir/CarePlan/123454" />
+					<reference value="http://jsportal.nl/FHIR/Koppeltaal/CarePlan/123458761454/_history/2015-07-01T11:31:21:868.5330" />
 				</data>
 			</MessageHeader>
 		</content>
 	</entry>
 	<entry>
-		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/CarePlan/123454" />
+		<id>http://jsportal.nl/FHIR/Koppeltaal/CarePlan/123458761454</id>
+		<link rel="self" href="http://jsportal.nl/FHIR/Koppeltaal/CarePlan/123458761454/_history/2015-07-01T11:31:21:868.5330" />
 		<content type="text/xml">
-			<CarePlan id="123454" xmlns="http://hl7.org/fhir">
+			<CarePlan id="123458761454" xmlns="http://hl7.org/fhir">
 				<patient>
-					<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+					<reference value="http://jsportal.nl/FHIR/Koppeltaal/Patient/215325" />
 				</patient>
 				<status value="active" />
 				<participant>
@@ -45,7 +45,7 @@
 						</coding>
 					</role>
 					<member>
-						<reference value="http://test.mijnapplicatie.nl/fhir/Practitioner/187534" />
+						<reference value="http://jsportal.nl/FHIR/Koppeltaal/Practitioner/187534" />
 					</member>
 				</participant>
 				<goal id="12523264643">
@@ -54,6 +54,9 @@
 					<notes value="Patient does not want to use smart phones." />
 				</goal>
 				<activity id="21232123523">
+					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityIdentifier">
+						<valueString value="http://jsportal.nl/FHIR/Koppeltaal/CarePlan/123458761454#21232123523" />
+					</extension>
 					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityDefinition">
 						<valueString value="JWG" />
 					</extension>
@@ -94,7 +97,7 @@
 					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#Participant">
 						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ParticipantMember">
 							<valueResource>
-								<reference value="http://test.mijnapplicatie.nl/fhir/Practitioner/187534" />
+								<reference value="http://jsportal.nl/FHIR/Koppeltaal/Practitioner/187534" />
 							</valueResource>
 						</extension>
 						<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ParticipantRole">
@@ -108,7 +111,7 @@
 						</extension>
 					</extension>
 					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#StartDate">
-						<valueDateTime value="2015-05-20T14:44:37+02:00" />
+						<valueDateTime value="2015-07-01T13:39:54+02:00" />
 					</extension>
 					<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/CarePlan#ActivityStatus">
 						<valueCoding>
@@ -123,7 +126,7 @@
 					<simple>
 						<category value="procedure" />
 						<performer>
-							<reference value="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+							<reference value="http://jsportal.nl/FHIR/Koppeltaal/Patient/215325" />
 						</performer>
 					</simple>
 				</activity>
@@ -131,7 +134,7 @@
 		</content>
 	</entry>
 	<entry>
-		<link rel="self" href="http://test.mijnapplicatie.nl/fhir/Patient/215325" />
+		<link rel="self" href="http://jsportal.nl/FHIR/Koppeltaal/Patient/215325" />
 		<content type="text/xml">
 			<Patient id="215325" xmlns="http://hl7.org/fhir">
 				<extension url="http://ggz.koppeltaal.nl/fhir/Koppeltaal/Patient#Age">
@@ -151,6 +154,25 @@
 				</gender>
 				<birthDate value="1972-02-28T00:00:00+01:00" />
 			</Patient>
+		</content>
+	</entry>
+	<entry>
+		<link rel="self" href="http://jsportal.nl/FHIR/Koppeltaal/Practitioner/187534" />
+		<content type="text/xml">
+			<Practitioner id="187534" xmlns="http://hl7.org/fhir">
+				<name>
+					<use value="official" />
+					<family value="Hole" />
+					<given value="Harry" />
+				</name>
+				<gender>
+					<coding>
+						<system value="http://hl7.org/fhir/vs/administrative-gender" />
+						<code value="M" />
+						<display value="Male" />
+					</coding>
+				</gender>
+			</Practitioner>
 		</content>
 	</entry>
 </feed>
