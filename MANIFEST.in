@@ -1,0 +1,4 @@
+recursive-include koppeltaal_schema  *.py *.xsd
+recursive-include tests *.py *.xml
+include *.md *.cfg *.py
+global-exclude *pyc
